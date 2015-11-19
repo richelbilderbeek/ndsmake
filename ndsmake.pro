@@ -1,16 +1,17 @@
-include(../../ConsoleApplication.pri)
-include(../../Libraries/Boost.pri)
-include(../../Libraries/GeneralConsole.pri)
-#include(../../Libraries/GeneralDesktop.pri)
+include(../RibiLibraries/ConsoleApplication.pri)
+include(../RibiLibraries/Boost.pri)
+include(../RibiLibraries/GeneralConsole.pri)
 
-include(../../Classes/CppQrcFile/CppQrcFile.pri)
-include(../../Classes/CppQtCreatorProFile/CppQtCreatorProFile.pri)
+include(../RibiClasses/CppQrcFile/CppQrcFile.pri)
+include(../RibiClasses/CppQtCreatorProFile/CppQtCreatorProFile.pri)
 
 SOURCES += \
     main.cpp \
-    ndsmake.cpp
+    ndsmake.cpp \
+    ndsmakecreateholymakefile.cpp \
+    ndsmakecreatemakefile.cpp
 
 HEADERS += \
-    createholymakefile.h \
-    createmakefile.h \
-    ndsmake.h
+    ndsmake.h \
+    ndsmakecreateholymakefile.h \
+    ndsmakecreatemakefile.h

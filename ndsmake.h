@@ -24,14 +24,13 @@ along with this program.If not, see <http://www.gnu.org/licenses/>.
 #include <string>
 #include <vector>
 
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Weffc++"
-#include <boost/shared_ptr.hpp>
-#pragma GCC diagnostic pop
+#include "qtcreatorprofile.h"
 
 namespace ribi {
 
 struct QtCreatorProFile;
+
+namespace ndsm {
 
 struct Ndsmake
 {
@@ -45,32 +44,31 @@ struct Ndsmake
 
   const std::string& GetCommand() const noexcept { return m_command; }
   static std::vector<std::string> GetHelp() noexcept;
-  static std::vector<std::string> GetHistory() noexcept;
   static std::vector<std::string> GetLicence() noexcept;
 
   ///Obtain the TARGET of the possibly multiple QtCreatorProFile::m_targets
   std::string GetTarget() const noexcept;
 
-  static std::string GetVersion() noexcept { return "1.2"; }
+  static std::string GetVersion() noexcept;
+  static std::vector<std::string> GetVersionHistory() noexcept;
 
   private:
-  ~Ndsmake() noexcept {}
-  friend void boost::checked_delete<>(Ndsmake* x);
 
-  const std::string m_argv0; //argv[0]
-  const std::string m_command; //A terminal command
-  const boost::shared_ptr<const QtCreatorProFile> m_proFile;
+  std::string m_argv0; //argv[0]
+  std::string m_command; //A terminal command
+  QtCreatorProFile m_pro_file;
 
-  std::string CreateCommand() const noexcept;
-  void CreateHolyMakefile() const noexcept;
-
-  boost::shared_ptr<const QtCreatorProFile> GetProFile() const noexcept { return m_proFile; }
+  std::string CreateCommand() const;
 
   //From http://www.richelbilderbeek.nl/CppRemoveExtension.htm
   static std::string RemoveExtension(const std::string& filename);
 
+  #ifndef NDEBUG
+  static void Test() noexcept;
+  #endif
 };
 
+} //~namespace ndsm
 } //~namespace ribi
 
 #endif // NDSMAKE_H
