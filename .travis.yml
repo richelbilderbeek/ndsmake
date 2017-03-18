@@ -42,7 +42,7 @@ script:
   # The program
   - qmake ndsmake.pro
   - make debug
-  - ./ndsmake
+  - ./ndsmake ndsmake.pro
   # cppcheck
   - cppcheck --quiet --error-exitcode=1 . 
   # Code coverage
