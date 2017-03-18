@@ -43,10 +43,6 @@ script:
   - qmake ndsmake.pro
   - make debug
   - ./ndsmake
-  # Console
-  - qmake AsciiArterConsole.pro
-  - make debug
-  - ./AsciiArterConsole --help
   # cppcheck
   - cppcheck --quiet --error-exitcode=1 . 
   # Code coverage
