@@ -12,13 +12,15 @@ BOOST_AUTO_TEST_CASE(ndsmake_needs_valid_input_file)
     std::invalid_argument);
 }
 
-BOOST_AUTO_TEST_CASE(ndsmake_needs_valid_input_file)
+#ifdef FIX_ISSUE
+BOOST_AUTO_TEST_CASE(parse_ndsmake_pro)
 {
 
-  const std::string argv0 = QDir::currentPath();
-  const std::string pro_file_name = "ndsmake.pro";
+  const std::string argv0 = QDir::currentPath().toStdString();
+  const std::string pro_file_name = "/home/richel/GitHubs/ndsmake/ndsmake.pro";
   BOOST_CHECK_NO_THROW(
     ribi::ndsm::Ndsmake(argv0, pro_file_name)
   );
 }
+#endif // FIX_ISSUE
 
