@@ -23,6 +23,7 @@ h_files=`ls *.h | egrep -v "^ui_.*\.h$" | egrep -v "^wt.*\.h$"`
   -I../RibiClasses/CppPlane \
   -I../RibiClasses/CppQtAboutDialog \
   -I../RibiClasses/CppQtArrowItem \
+  -I../RibiClasses/CppQtCreatorProFile \
   -I../RibiClasses/CppQtHideAndShowDialog \
   -I../RibiClasses/CppQtScopedDisable \
   -I../RibiClasses/CppRibiRegex \

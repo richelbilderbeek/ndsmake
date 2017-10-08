@@ -2,7 +2,7 @@
 
 #include <fstream>
 
-void ribi::ndsm::CreateHolyMakefile() noexcept
+void ribi::ndsm::CreateHolyMakefile() noexcept //!OCLINT keep the holy makefile pure
 {
   std::ofstream f("Makefile");
   f
