@@ -2,6 +2,7 @@
 #pragma GCC diagnostic ignored "-Weffc++"
 #include "ndsmake.h"
 
+#include <cassert>
 #include <fstream>
 #include <sstream>
 
@@ -22,8 +23,8 @@ ribi::ndsm::Ndsmake::Ndsmake(
   if (!fileio::FileIo().IsRegularFile(pro_file_name))
   {
     std::stringstream msg;
-    msg << __func__ << ": file '" << pro_file_name << "' not found";
-    throw std::logic_error(msg.str());
+    msg << "file '" << pro_file_name << "' not found";
+    throw std::invalid_argument(msg.str());
   }
   m_command = CreateCommand();
 }

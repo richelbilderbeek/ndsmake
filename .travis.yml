@@ -39,8 +39,12 @@ before_script:
   - sleep 3 # give xvfb some time to start
 
 script: 
+  # Test
+  - qmake -qt=qt5 ndsmake_test.pro
+  - make debug
+  - ./ndsmake_test
   # The program
-  - qmake ndsmake.pro
+  - qmake -qt=qt5 ndsmake.pro
   - make debug
   # - ./ndsmake ndsmake.pro # Do not run, gives an error
   # cppcheck
