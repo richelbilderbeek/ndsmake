@@ -25,6 +25,8 @@ services:
  - xvfb
 
 script: 
+  # Download a test .pro file
+  - wget https://raw.githubusercontent.com/richelbilderbeek/libnds_example_1/master/libnds_example_1.pro
   # Test
   - qmake -qt=qt5 ndsmake_test.pro
   - make --silent debug
