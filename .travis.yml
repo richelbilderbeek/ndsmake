@@ -27,11 +27,11 @@ services:
 script: 
   # Test
   - qmake -qt=qt5 ndsmake_test.pro
-  - make debug
+  - make --silent debug
   - ./ndsmake_test
   # The program
   - qmake -qt=qt5 ndsmake.pro
-  - make debug
+  - make --silent debug
   # - ./ndsmake ndsmake.pro # Do not run, gives an error
   # cppcheck
   - cppcheck --quiet --error-exitcode=1 . 
