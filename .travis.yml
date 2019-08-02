@@ -8,8 +8,6 @@ install:
   - sudo apt install -qq libboost-all-dev
   # Qt5
   - sudo apt-get install -qq qt5-qmake qt5-default
-  # Wt
-  - sudo apt-get install -qq witty witty-dbg witty-dev witty-doc
   # cppcheck
   - sudo apt-get install -qq cppcheck
   # Codecov
