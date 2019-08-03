@@ -1,4 +1,4 @@
-#pragma GCC diagnostic push
+
 
 #include "ndsmake.h"
 
@@ -10,7 +10,7 @@
 #include "qtcreatorprofile.h"
 #include "ndsmakecreateholymakefile.h"
 #include "ndsmakecreatemakefile.h"
-#pragma GCC diagnostic pop
+
 
 ribi::ndsm::Ndsmake::Ndsmake(
   const std::string& argv0,
