@@ -31,3 +31,5 @@
 Makefile
 Makefile.*
 ndsmake
+
+site/
