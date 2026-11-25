@@ -1,9 +1,10 @@
 # ndsmake
 
-[Go to the nicely rendered website](https://richelbilderbeek.github.io/ndsmake/).
+[Go to the nicely rendered
+website](https://richelbilderbeek.github.io/ndsmake/).
 
 Tool to make an NDS project in Qt Creator..
 
-![](ToolNdsmakeUse_1_0.png)
+![Using ndsmake](ToolNdsmakeUse_1_0.png)
 
 > Where to call ndsmake in Qt Creator

@@ -1,8 +1,12 @@
 # ndsmake
 
-Generate [Makefiles](https://github.com/richelbilderbeek/cpp/blob/master/content/CppMakefile.md) for [NDS](https://github.com/richelbilderbeek/cpp/blob/master/content/CppNds.md).
+Generate
+[Makefiles](https://github.com/richelbilderbeek/cpp/blob/master/content/CppMakefile.md)
+for
+[NDS](https://github.com/richelbilderbeek/cpp/blob/master/content/CppNds.md).
 
-ndsmake is one of [Richèl Bilderbeek's tools](https://richelbilderbeek.github.io/tools/).
+ndsmake is one of [Richèl Bilderbeek's
+tools](https://richelbilderbeek.github.io/tools/).
 
 ![ndsmake](ndsmake_ToolNdsmakeUse_1_0.png)
 
