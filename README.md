@@ -1,5 +1,7 @@
 # ndsmake
 
+[![Codecov](https://codecov.io/gh/richelbilderbeek/ndsmake/branch/main/graph/badge.svg)](https://codecov.io/gh/richelbilderbeek/ndsmake)
+
 [Go to the nicely rendered
 website](https://richelbilderbeek.github.io/ndsmake/).
 
